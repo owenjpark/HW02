@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { auth } from '../firebase';
 
 const LoginScreen = () => {
@@ -13,7 +13,7 @@ const LoginScreen = () => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, user => {
             if (user) {
-                navigation.replace("Home")
+                navigation.replace("HomeT")
             }
         })
 

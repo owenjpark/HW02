@@ -1,10 +1,8 @@
-import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity} from 'react-native'
 import { auth } from '../firebase'
 import { useNavigation } from '@react-navigation/native'
 
-const HomeScreen = () => {
-
+export default function HomeScreen() {
     const navigation = useNavigation()
 
     const handleSignOut = () => {
@@ -28,8 +26,6 @@ const HomeScreen = () => {
         </View>
     )
 }
-
-export default HomeScreen
 
 const styles = StyleSheet.create({
     container: {
